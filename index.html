@@ -7,6 +7,89 @@
     <title>Document</title>
   </head>
   <body>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#Introduction">Introduction</a></li>
+        <li><a href="#Node_And_V8">Node And V8</a></li>
+        <li>
+          <a href="#What_you_should_already_know"
+            >What you should already know</a
+          >
+        </li>
+        <li><a href="#Hello_World">Hello World</a></li>
+        <li>
+          <a href="#Blocking_Vs_Non-Blocking">Blocking Vs Non-Blocking</a>
+        </li>
+        <li><a href="#Node_API">Node API</a></li>
+        <li><a href="#Event_Loop">Event Loop</a></li>
+        <li><a href="#Timers">Timers</a></li>
+        <li><a href="#HTTP_Transaction">HTTP Transaction</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>
+          Node.js is a Javscript runtime built on the V8 Javscript engine. It is
+          used to execute Javascript code outside of a web browser
+        </p>
+        <p>Node.js is single threaded, non-blocking, and asynchronous.</p>
+        <ul>
+          <li>
+            A node app runs in a single process, without creating a new thread
+            for every request.
+          </li>
+          <li>
+            Libraries in Node.js are written using non-blocking paradigms,
+            making blocking behavior the exception rather than the norm.
+          </li>
+        </ul>
+      </section>
+      <section class="main-section" id="Node_and_V8">
+        <header>Node and V8</header>
+        <p>
+          V8 is Google's open source high-performace Javascript engine(written
+          in C++)
+        </p>
+        <p>
+          V8 comiles and executes Javascript source code, handles memeory
+          allocation for onjects, and garbage collects objects it no longer
+          neeeds.
+        </p>
+        <p>
+          JavaScript is commonly used for client-side scripting in the browser,
+          being used to manipulate Document Object Model(DOM) objects for
+          example. The DOM is not however, typically provided buyt thye
+          Javascript engine, but by the browser. Same for V8, Google Chrome
+          provides the DOM. V8 does however provide all the data types,
+          operators, objects, and functions specified in the ECMA standard.
+        </p>
+      </section>
+      <section class="main-section" id="What_you_should_already_know">
+        <header>What you should already know</header>
+        <p></p>
+      </section>
+
+      <section class="main-section" id="Hello_World">
+        <header>Hello World</header>
+      </section>
+      <section class="main-section" id="Blocking_Vs_Non-Blocking">
+        <header>Blocking Vs Non-Blocking</header>
+      </section>
+      <section class="main-section" id="Node_API">
+        <header>Node API</header>
+      </section>
+      <section class="main-section" id="Event_Loop">
+        <header>Event Loop</header>
+      </section>
+      <section class="main-section" id="Timers">
+        <header>Timers</header>
+      </section>
+      <section class="main-section" id="HTTP_Transaction">
+        <header>HTTP Transaction</header>
+      </section>
+    </main>
+
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
