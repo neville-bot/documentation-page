@@ -59,25 +59,92 @@
             allocation for objects, and garbage collects objects it no longer
             needs.
           </p>
-          <p>
-            JavaScript is commonly used for client-side scripting in the
-            browser, being used to manipulate Document Object Model(DOM) objects
-            for example. The DOM is not typically provided by the Javascript
-            engine, but by the browser. Same for V8, Google Chrome provides the
-            DOM. V8 does however provide all the data types, operators, objects,
-            and functions specified in the ECMA standard.
-          </p>
+          <ul>
+            <li>
+              JavaScript is commonly used for client-side scripting in the
+              browser, being used to manipulate Document Object Model(DOM)
+              objects for example.
+            </li>
+            <li>
+              The DOM is not typically provided by the Javascript engine, but by
+              the browser. Same for V8, Google Chrome provides the DOM. V8 does
+              however provide all the data types, operators, objects, and
+              functions specified in the ECMA standard.
+            </li>
+          </ul>
         </section>
         <section class="main-section" id="What_you_should_already_know">
           <header>What you should already know</header>
-          <p></p>
+          <p>
+            As a beginner, it's hard to get to a point where you are confident
+            enough in your programming abilities. While learning to code, you
+            might also be confused at where does JavaScript end, and where
+            Node.js begins, and vice versa. I would recommend you to have a good
+            grasp of the main JavaScript concepts before diving into Node.js:
+          </p>
+
+          <ul>
+            <li>Lexical Structure</li>
+            <li>Expressions</li>
+            <li>Types</li>
+            <li>Scopes</li>
+            <li>Classes</li>
+            <li>Variables</li>
+            <li>Functions</li>
+            <li>this</li>
+            <li>Arrow Functions</li>
+            <li>Loops</li>
+            <li>Arrays</li>
+            <li>Template Literals</li>
+            <li>Semicolons</li>
+            <li>Strict Mode</li>
+            <li>ECMAScript 6, 2016, 2017</li>
+          </ul>
         </section>
 
         <section class="main-section" id="Hello_World">
           <header>Hello World</header>
+          <p>The most common example for Node.js is a web server:</p>
+          <p>
+            <code
+              >const server = http.createServer((req, res) => {
+              <br />
+              res.statusCode = 200 res.setHeader('Content-Type', 'text/plain')
+              res.end('Hello World\n') })
+            </code>
+          </p>
         </section>
         <section class="main-section" id="Blocking_Vs_Non-Blocking">
           <header>Blocking Vs Non-Blocking</header>
+          <p>
+            Blocking is when the execution of additional JavaScript in the
+            Node.js process must wait until a non-JavaScript operation
+            completes. This happens because the event loop is unable to continue
+            running JavaScript while a blocking operation is occurring.
+          </p>
+          <p>
+            All of the I/O methods in the Node.js standard library provide
+            asynchronous versions, which are non-blocking, and accept callback
+            functions. Some methods also have blocking counterparts, which have
+            names that end with Sync.
+          </p>
+          <p>
+            Using the File System module as an example, this is a synchronous
+            file read:
+          </p>
+          <code
+            >const fs = require('fs');
+            <br />
+            const data = fs.readFileSync('/file.md'); //blocks here until file
+            is read</code
+          >
+          <p>And here is an equivalent asynchronous example:</p>
+          <code
+            >const fs = require('fs');
+            <br />
+            fs.readFile('/file.md', (err, data) => { if (err) throw err;
+            });</code
+          >
         </section>
         <section class="main-section" id="Node_API">
           <header>Node API</header>
