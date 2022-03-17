@@ -1,14 +1,30 @@
 * {
   box-sizing: border-box;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   padding: 0;
   margin: 0;
 }
 p {
-  font-size: 14px;
+  margin: 1em 0.5em 1em 0.5em;
 }
 
+li {
+  margin-left: 3em;
+  padding: 10px;
+}
+code {
+  display: block;
+  text-align: left;
+  white-space: nowrap;
+  position: relative;
+  word-break: normal;
+  word-wrap: break-word;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
 #main-doc {
   margin-left: 300px;
 }
@@ -40,8 +56,7 @@ p {
   color: black;
 }
 .main-section {
-  border: 1px solid black;
-  padding: 2em;
+  padding: 1em 3em 1em 3em;
 }
 header {
   font-size: 2rem;
