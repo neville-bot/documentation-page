@@ -184,6 +184,50 @@
         </section>
         <section class="main-section" id="Event_Loop">
           <header>Event Loop</header>
+          <p>
+            The Event Loop is the main thread of Node.js. It is responsible for
+            scheduling and executing tasks.
+          </p>
+          <ul>
+            <li>
+              Node.js can be asynchronous and have non-blocking I/O, and so it
+              explains basically the "killer app" of Node.js, the thing that
+              made it this successful.
+            </li>
+            <li>
+              The Node.js JavaScript code runs on a single thread. There is just
+              one thing happening at a time.
+            </li>
+            <li>
+              This simplifies how you program as you don't have to worry about
+              concurrency issues.
+            </li>
+            <li>
+              Avoid blocking the thread: synchronous network calls or infinite
+              loops.
+            </li>
+            <li>
+              In general, in most browsers there is an event loop for every
+              browser tab, to make every process isolated and avoid a web page
+              with infinite loops or heavy processing to block your entire
+              browser.
+            </li>
+          </ul>
+        </section>
+
+        <section class="main-section" id="Call_Stack">
+          <header>The Call Stack</header>
+          <p>The call stack is a LIFO (Last In, First Out) stack.</p>
+          <ul>
+            <li>
+              The event loop continuously checks the call stack to see if
+              there's any function that needs to run.
+            </li>
+            <li>
+              While doing so, it adds any function call it finds to the call
+              stack and executes each one in order.
+            </li>
+          </ul>
         </section>
         <section class="main-section" id="Timers">
           <header>Timers</header>
